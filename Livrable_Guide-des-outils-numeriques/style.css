@@ -1,0 +1,291 @@
+body {
+	margin: 0px;
+	background: #7aa4a9;
+	font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+	font-size: 18px;
+	color: #f1f2ec;
+}
+
+
+
+.mainArea {
+	width: 95%;
+	margin: auto;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+}
+
+.title {
+	color: #3a5336;
+	margin-bottom: 0px;
+}
+
+.buttonArea {
+	text-align: center;
+	height: 4.5em;
+}
+
+.chartArea {
+    background-color:#ffe;
+    box-shadow:0 0 1em 1px rgba(0,0,0,.25);
+    color:#006;
+    font-family:cursive;
+    font-style:italic;
+    font-size: 24px;
+    margin:1em;
+    max-width:70em;
+    padding:1em;
+    max-height: 700;
+    max-width: 700;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    width: 500;
+    height: 500;
+  }
+
+  .dataArea {
+    background-color:#ffe;
+    box-shadow:0 0 1em 1px rgba(0,0,0,.25);
+    color:#006;
+    
+
+    font-size: 20px;
+    margin:1em;
+    max-width:70em;
+    padding:1em;
+    max-height: 700;
+    max-width: 700;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 500;
+    height: 500;
+  }
+
+  .red {
+    color:rgb(224, 16, 16);
+  }
+
+.questionAnswers {
+	width: 90%;
+	margin: auto;
+
+}
+
+.question {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.buttonArea>button {
+	height: 4em;
+	width: 140px;
+	padding: 1.5em auto;
+	margin: 1em auto;
+	background-color: #f1f2ec;
+	border: none;
+	border-radius: 3px;
+	color: #7aa4a9;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
+
+}
+/*
+#previous:not(.disabled):hover,
+#next:not(.disabled):hover,
+#submit:not(.disabled):hover,
+#retour:not(.disabled):hover
+{
+	letter-spacing: 0.8em;
+}
+*/
+button:not(.disabled):hover
+{
+	letter-spacing: 0.8em;
+}
+/*
+#previous:not(.disabled):active,
+#next:not(.disabled):active,
+#submit:not(.disabled):active,
+#retour:not(.disabled):active
+{
+	letter-spacing: 0.3em;
+}
+*/
+button:not(.disabled):active
+{
+	letter-spacing: 0.3em;
+}
+
+.my-progress {
+	position: relative;
+	display: block;
+	margin: 3rem auto 0rem;
+	width: 100%;
+	max-width: 950px;
+}
+
+progress {
+	display: block;
+	position: relative;
+	top: -0.5px;
+	left: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: #f1f2ec;
+	width: 100%;
+	height: 5px;
+	background: none;
+	-webkit-transition: 1s;
+	transition: 1s;
+	will-change: contents;
+}
+
+
+.my-progress-indicator {
+	position: absolute;
+	top: -6px;
+	left: 0;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #7aa4a9;
+	border: 3px solid #f1f2ec;
+	border-radius: 50%;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	-webkit-transition-delay: .3s;
+	transition-delay: .3s;
+	will-change: transform;
+}
+
+.my-progress-indicator.active {
+	-webkit-animation: bounce .5s forwards;
+	animation: bounce .5s forwards;
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
+	border-color: #153f65;
+
+}
+
+.animation-container {
+	position: relative;
+	width: 100%;
+	-webkit-transition: .3s;
+	transition: .3s;
+	will-change: padding;
+	overflow: hidden;
+}
+
+
+
+.hidden {
+	display: none;
+}
+
+button.disabled {
+	cursor: not-allowed;
+	background-color: rgb(49, 49, 49) ;
+}
+
+.disabled>* {
+	pointer-events: none;
+}
+
+
+.reponses {
+	list-style-type: none;
+	width: 700px;
+	padding-left: 20%;
+	margin: auto;
+	text-align: left;
+}
+
+li.myoptions {
+	position: relative;
+	padding: 10px;
+	padding-left: 40px;
+	height: 30px;
+}
+
+label {
+	color: #fff;
+}
+
+.oneanswer:before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background: #afd1c1;
+	position: absolute;
+	left: 7px;
+	top: calc(50% - 13px);
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+
+.oneanswer.disabled {
+	text-decoration: line-through;
+}
+
+p.infoNote {
+	font-size: 0.8em;
+	text-align: center;
+	font-style: italic;
+}
+
+input[type="radio"] {
+	opacity: 0;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 15px);
+	cursor: pointer;
+}
+
+.bullet {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	left: -3px;
+	top: 2px;
+	border: 5px solid #fff;
+	opacity: 0;
+	border-radius: 50%;
+}
+
+input[type="radio"]:checked~.bullet {
+	position: absolute;
+	opacity: 1;
+	animation-name: explode;
+	animation-duration: 0.350s;
+}
+
+@keyframes explode {
+	0% {
+		opacity: 0;
+		transform: scale(10);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale(0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+

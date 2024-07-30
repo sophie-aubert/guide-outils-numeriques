@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype - Guide des outils numériques</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stars.css">
+    <link rel="stylesheet" href="./popup.css">
+    <link rel="stylesheet" href="./rapport.css">
+</head>
+
+<body onload="setupPage()">
+    <div class="pageQuestions">
+        <div class="mainArea">
+
+            <h1 class="title">
+                Prototype - Guide des outils numériques
+            </h1>
+
+            <h2 class="subtitle">
+                Répondez aux questions suivantes pour obtenir des recommandations d'outils numériques
+            </h2>
+
+            <div class="buttonArea">
+                <button id="previous" class="disabled" disabled>Retour</button>
+                <button id="next" class="disabled" disabled>Suivant</button>
+                <button id="submit" class="disabled" disabled>Rapport</button>
+            </div>
+
+            <div class="my-progress"></div>
+
+            <div class="questionReponses">
+                <div class="question"> </div>
+                <div class="reponses"></div>
+                <div class="stars"></div>
+            </div>
+        </div>
+
+        <div class="chartArea">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="dataArea"></div>
+    </div>
+    <div class="pageRapport hidden">
+        <div class="buttonArea">
+            <button id="retour">Retour</button>
+        </div>
+        <div class="rapport"></div>
+        <div id="popup-wrapper" class="popup-container">
+            <div class="popup-content">
+                <span class="clickable" id="close">&times;</span>
+                <span id="popup-text"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./chart.js"></script>
+    <script src="./questions.js"></script>
+    <script src="./rapport.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
